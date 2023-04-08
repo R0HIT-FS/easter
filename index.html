@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background-color: grey;
+        }
+        .container{
+            
+            min-height : 100vh;
+            min-width : 100%;
+            width: min(90%,1000px);
+            margin-inline: auto;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: grey; */
+        }
+        .doorway{
+            height: 9rem;
+            width: 7rem;
+            background-color: white;
+            position: absolute;
+            top: 11rem;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            box-shadow:-15px -15px 15px rgba(255, 255, 255, 0.2),
+                        15px 15px 15px rgba(0, 0, 0, 0.1) ,
+                        inset -5px -5px 4px rgba(255, 255, 255, 0.2),
+                        inset 5px 5px 4px rgba(0, 0, 0, 0.1) ;
+
+
+        }
+        .doorway::before{
+            display: block;
+            content: '';
+            position: absolute;
+            background-color: grey;
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            left: -25%;
+            right: 0%;
+            width: 100%;
+            z-index: 1;
+            height: 10.5rem;
+            width: 10.5rem;
+            box-shadow:-15px -15px 15px rgba(255, 255, 255, 0.2),
+                        15px 15px 15px rgba(0, 0, 0, 0.1) ;
+            animation: roll 0.8s ease-in 1.4s 1 forwards;
+        }
+        @keyframes roll{
+            0%{left: -25%;}
+            10%{left: -15%;}
+            20%{left: -10%;}
+            30%{left: 0%;}
+            40%{left: 15%;}
+            50%{left: 20%;}
+            60%{left: 30%;}
+            70%{left: 40%;}
+            80%{left: 50%;}
+            90%{left: 55%;}
+            100%{left: 60%;}
+        }
+        .greet{
+            margin: 0;padding: 0;
+            position: absolute;
+            top: 26rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+        .family{
+            margin: 0;padding: 0;
+            position: absolute;
+            top: 31rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            /* font-family: 'Dela Gothic One', cursive; */
+            font-family: 'Montserrat', sans-serif;
+        }
+        .rohit{
+            top: 35rem;
+        }
+        .easter{
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+        .name{
+            font-size: 1.4rem;
+            font-weight: 900;
+        }
+        .first{
+            position: relative;
+        }
+        .second{
+            position: relative;
+        }
+        .first::after{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0%;
+            right: 0%;
+            width: 100%;
+            z-index: 1;
+            background-color: grey;
+            animation: reveal 1.9s ease-in-out 2.5s 1 forwards;
+        }
+        .second::after{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0%;
+            right: 0%;
+            width: 100%;
+            z-index: 1;
+            background-color: grey;
+            animation: reveal 1.9s ease-in-out 5.5s 1 forwards;
+        }
+        @keyframes reveal {
+            0% {left: 0%;width: 100%;}
+            10% {left: 10%;width: 90%;}
+            20% {left: 20%;width: 80%;}
+            30% {left: 30%;width: 70%;}
+            40% {left: 40%;width: 60%;}
+            50% {left: 50%;width: 50%;}
+            60% {left: 60%;width: 40%;}
+            70% {left: 70%;width: 30%;}
+            80% {left: 80%;width: 20%;}
+            90% {left: 90%;width: 10%;}
+            100% {left: 100%;width: 0%;}
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="container">
+        <div class="doorway"></div>
+    <div class="greet">
+        <div class="first">
+
+            <div class="easter">
+                HAPPY EASTER!
+            </div>
+        </div>
+    </div>
+    <div class="family">
+        <div class="second">
+            <div class="name">
+                TO YOU AND YOUR FAMILY
+            </div>
+        </div>
+    </div>
+    <div class="rohit family">
+        <div class="second">
+            <div class="name">
+                -ROHIT
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
